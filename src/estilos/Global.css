@@ -1,0 +1,26 @@
+*{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(2, 17, 49, 0.774);
+  background-repeat: no-repeat;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  height: 100vh;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

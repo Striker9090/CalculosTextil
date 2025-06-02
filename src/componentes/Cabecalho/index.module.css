@@ -1,0 +1,67 @@
+.background{
+    display: block;
+    position: absolute;
+    background-image: url("../../imagens/Background4.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 50%;
+    background-size: cover;
+    filter: blur(1px) opacity(60%);
+    mask-image: radial-gradient(ellipse at center, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+    width:  100vw;
+    height: 40%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    width: 100vw;
+    height: 150px;
+    margin-bottom: 50px;
+    z-index: 3;
+}
+
+.elements{
+    display: flex;
+    margin: 0px 30px;
+    gap: 65px;
+    align-items: center;
+
+    & a{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.title{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: rgb(199, 195, 195);
+    font-size: 20px;
+    text-align: center;
+    z-index: 1;
+    margin-left: 40px;
+
+    & img{
+        width: 60px;
+        filter: opacity(70%);
+        transform: rotate(45deg);
+        z-index: 1;
+    }
+}
+
+.title:hover{
+    cursor: pointer;
+    color: rgb(119, 119, 119);
+    transition: all 0.3s ease-in-out;
+
+    & img{
+        filter: opacity(50%);
+        transition: all 0.3s ease-in-out;
+    }
+}
