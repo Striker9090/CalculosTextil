@@ -8,7 +8,7 @@ export default function Cabecalho() {
       <div className={style.background} ></div>
       <div className={style.navegacao}>
         <a className={style.title}>
-          <img src="/src/imagens/Logo.svg"></img>Têxtil
+          <img src="/Logo.svg"></img>Têxtil
         </a>
         <div className={style.elements}>
           <Links><Home/>Home</Links>

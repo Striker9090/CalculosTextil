@@ -1,7 +1,7 @@
 .background{
     display: block;
     position: absolute;
-    background-image: url("../../imagens/Background4.jpg");
+    background-image: url("/Background4.jpg");
     background-repeat: no-repeat;
     background-position: 0px 50%;
     background-size: cover;
