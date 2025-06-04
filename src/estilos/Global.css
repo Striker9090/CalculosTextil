@@ -1,7 +1,9 @@
+@import "tailwindcss";
+
 *{
     text-decoration: none;
     color: white;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 body {
