@@ -2,13 +2,13 @@
 
 *{
     text-decoration: none;
-    color: white;
-    font-size: 14px;
+      
 }
 
 body {
   margin: 0;
-  background-color: rgba(2, 17, 49, 0.774);
+  background: var(--background);
+ /*  background: linear-gradient(45deg, #7dc1df 60%, #FFEED0); */
   background-repeat: no-repeat;
 }
 

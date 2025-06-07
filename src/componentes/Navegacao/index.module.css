@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+.Blocos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+  & img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    display: flex;
+    flex-grow: 1;
+    margin: 5px;
+    border-radius: 10px 5px;
+    box-shadow: 10px 10px 10px -7px black;
+  }
+
+  & img:hover {
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 25%;
+  top: -125px;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .overlay {
+    opacity: 1;
+  }
+  .Blocos {
+    & img {
+      width: 350px;
+    }
+  }
+}

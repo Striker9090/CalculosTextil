@@ -1,17 +1,17 @@
-import Bloco from "./componentes/Blocoscalculos"
-import Cabecalho from "./componentes/Cabecalho"
-import "./estilos/variaveis.css"
-
+import Decoracoes from "./componentes/Fundo";
+import Cabecalho from "./componentes/Cabecalho";
+import Navegacao, {BlocosNavegacao} from "./componentes/Navegacao";
+import "./estilos/variaveis.css";
 
 function App() {
-
   return (
     <>
-      <Cabecalho/>
-      <Bloco/>
-      
+      <Cabecalho />
+      <Decoracoes/>
+      <Navegacao/>
+      <BlocosNavegacao/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

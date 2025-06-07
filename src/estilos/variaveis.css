@@ -1,3 +1,29 @@
 :root{
     --titulo-texto: 20px;
+
+    --botao: #E07A5F;
+    --fundo-suave: #5C8A87;
+    --elementos-fundo: #A6B88E;
+    --background: #F4F1DE;
+    --card: #FAF7F0;
+    --tipografia-principal: #5e3e2b;
+    --tipografia-secundaria: #A66E4A;
+    --tipografia: #1E1E1C;
+    --grafico: #F2997A;
+    --divisao: #B4A89F;
 }
+
+/* 
+Terracota	#E07A5F	Destaques, botões, ícones ativos
+Azul Petróleo Claro	#5C8A87	Fundos suaves, seções de malharia
+Verde Oliva Claro	#A6B88E	Elementos de fundo, gráficos naturais
+Areia/Bege Claro	#F4F1DE	Fundo principal, áreas amplas
+Creme Neutro	#FAF7F0	Background de cards, zonas de cálculo
+Marrom Médio	#A66E4A	Tipografia secundária, bordas sutis
+Coral Suave	#F2997A	Gráficos, destaques com calor humano
+Cinza Quente	#B4A89F	Divisores, UI sutil, barras e sliders
+Fundo base escuro: #1E1E1C
+
+Cinza carvão: #2F2F2F
+
+Texto claro: #EFEFEF */

@@ -1,0 +1,9 @@
+    .fundo{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    filter: opacity(50%);
+    pointer-events: none;
+    z-index: -1;
+}
+

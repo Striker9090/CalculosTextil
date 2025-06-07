@@ -5,11 +5,14 @@
     & a{
          display: flex;
          gap: 15px;
+         font-weight: 500;
+         color: var(--tipografia)
     }
 }
 .link:hover{
-    background-color: rgba(128, 128, 128, 0.4);
-    border-radius: 10px;
+    background-color: rgba(75, 75, 75, 0.2);
+    border-radius: 100px;
     color-scheme: initial;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
