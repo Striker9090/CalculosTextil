@@ -1,7 +1,7 @@
     .fundo{
     position: absolute;
-    bottom: 0px;
-    width: 100%;
+    bottom: 10%;
+    width: 100vw;
     filter: opacity(50%);
     pointer-events: none;
     z-index: -1;
