@@ -1,6 +1,5 @@
 import { BadgeHelp, FolderClosed, Home } from "lucide-react";
 import { Links } from "../Utilitarios/Links";
-import style from "./index.module.css";
 import { FiMenu } from "react-icons/fi"; // ícone dos 3 pontinhos
 import { useState } from "react";
 
