@@ -1,10 +1,9 @@
-import { BadgeHelp, Bolt, Calculator, FolderClosed, Home } from "lucide-react";
+import { BadgeHelp, Bolt, FolderClosed, Home } from "lucide-react";
 import { Links } from "../Utilitarios/Links";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import style from "./index.module.css";
-import { DiReact } from "react-icons/di";
 import { SiWolframlanguage } from "react-icons/si";
 
 export default function Cabecalho() {
