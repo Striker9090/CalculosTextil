@@ -53,3 +53,16 @@
         transition: all 0.3s ease-in-out;
     }
 }
+
+.link{
+    & a{
+        transition: all 0.3s ease-out;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        padding: 15px;
+        background-color: white;
+        border-radius: 100px;
+    }
+
+}
