@@ -45,7 +45,7 @@ export default function Cabecalho() {
       </div>
 
 
-      <SiWolframlanguage size={35} className="md:hidden absolute top-5 left-[50%] text-(--tipografia-principal)  "/>
+      <SiWolframlanguage size={35} className="md:hidden absolute top-5 left-[48%] text-(--tipografia-principal)  "/>
       {smarthfone && (
         <div className={`${style.link} md:hidden`}>
           <Links>
