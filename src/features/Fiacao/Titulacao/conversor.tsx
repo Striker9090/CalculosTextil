@@ -1,5 +1,5 @@
 import { Repeat } from "lucide-react";
-import style from "../calculo.module.css"
+import style from "../calculo.module.css";
 import { useEffect, useState } from "react";
 
 type TipoTitulo = "NE" | "NM" | "TEX" | "DTEX" | "DENIER";
@@ -17,7 +17,7 @@ export default function ConversorTitulo() {
   const [tipoSaida, setTipoSaida] = useState<TipoTitulo>("TEX");
   const [valorEntrada, setValorEntrada] = useState("");
   const [valorSaida, setValorSaida] = useState("");
-  const [qtdCabos, setQtdCabos] = useState(5);
+  const [qtdCabos, setQtdCabos] = useState(1);
   const [tabelaValores, setTabelaValores] = useState<string[][]>([]);
   const [mostrarTabela, setMostrarTabela] = useState(false);
 
@@ -28,6 +28,11 @@ export default function ConversorTitulo() {
   const calcular = () => {
     const raw = valorEntrada.replace(",", ".");
     const valor = parseFloat(raw);
+    if (!valorEntrada.trim()) {
+      setValorSaida("");
+      setTabelaValores([]);
+      return;
+    }
     if (isNaN(valor) || valor <= 0) {
       setValorSaida("Inválido");
       setTabelaValores([]);
@@ -77,7 +82,7 @@ export default function ConversorTitulo() {
         </div>
 
         <div className={style.blocoCtitulo}>
-          <label>Tipo</label>
+          <label htmlFor="tipo">Tipo</label>
           <select
             value={tipoEntrada}
             onChange={(e) => setTipoEntrada(e.target.value as TipoTitulo)}
@@ -89,6 +94,7 @@ export default function ConversorTitulo() {
             <option value="DENIER">Denier</option>
           </select>
           <input
+            id="tipo"
             className={style.input}
             placeholder="Valor"
             value={valorEntrada}
@@ -97,7 +103,7 @@ export default function ConversorTitulo() {
         </div>
 
         <div className={style.blocoCtitulo}>
-          <label>Para</label>
+          <label htmlFor="para">Para</label>
           <select
             value={tipoSaida}
             onChange={(e) => setTipoSaida(e.target.value as TipoTitulo)}
@@ -108,12 +114,19 @@ export default function ConversorTitulo() {
             <option value="DTEX">Dtex</option>
             <option value="DENIER">Denier</option>
           </select>
-          <input className={style.input} value={valorSaida} disabled placeholder="Resultado" />
+          <input
+            id="para"
+            className={style.input}
+            value={valorSaida}
+            disabled
+            placeholder="Resultado"
+          />
         </div>
 
         <div className="campo">
-          <label>Qtd. Cabos</label>
+          <label htmlFor="qtd_cabos">Qtd. Cabos</label>
           <input
+            id="qtd_cabos"
             className={style.input}
             type="number"
             value={qtdCabos}
