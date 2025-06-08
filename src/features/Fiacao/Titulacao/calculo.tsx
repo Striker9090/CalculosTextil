@@ -1,5 +1,5 @@
 import { Calculator } from "lucide-react";
-import style from "../index.module.css";
+import style from "../calculo.module.css";
 import { useEffect, useState } from "react";
 
 export function CalculoTitulo() {
@@ -9,7 +9,7 @@ export function CalculoTitulo() {
     <>
       <div className={style.tittle}>
         <Calculator />
-        Conversões
+         Calcular Título
       </div>
       <div className={style.blocoCtitulo}>
         Tipo
@@ -77,7 +77,7 @@ function CalculadoraGenerica({
         id="peso"
         type="number"
         value={peso}
-        placeholder="Digite um valor"
+        placeholder="Valor"
         onChange={(e) => setPeso(e.target.value)}
       >
         Peso (g)
@@ -88,7 +88,7 @@ function CalculadoraGenerica({
         id="titulo"
         type="number"
         value={titulo}
-        placeholder="Digite um valor"
+        placeholder="Valor"
         onChange={(e) => setTitulo(e.target.value)}
       >
         Título (ne)
@@ -99,7 +99,7 @@ function CalculadoraGenerica({
         id="comprimento"
         type="number"
         value={comprimento}
-        placeholder="Digite um valor"
+        placeholder="Valor"
         onChange={(e) => setMetragem(e.target.value)}
       >
         Comprimento (m)

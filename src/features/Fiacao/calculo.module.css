@@ -1,34 +1,27 @@
 .content{
-display: flex;
-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
 }
 
 .bloco{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     background-color:rgba(31, 47, 83, 0.699);
     backdrop-filter: blur(10px);
     padding: 20px;
     margin: 15px 30px;
     border-radius: 10px 5px;
-    min-width: 250px;
-    width: fit-content;
+    min-width: 285px;
+    max-width: 400px;
     gap: 10px;
     box-shadow: 5px 5px 15px 0px rgb(0, 0, 0)  ;
 }
 
-.bloco2{
-    display: flex;
-    flex-direction: column;
-    background-color:rgba(31, 47, 83, 0.808);
-    padding: 20px;
-    margin: 15px 30px;
-    border-radius: 10px 5px;
-    min-width: 650px;
-    width: fit-content;
-    gap: 10px;
-    box-shadow: 5px 5px 15px 0px rgb(0, 0, 0)  ;
-}
+
 
 .blocoCtitulo{
     font-weight: 200;
@@ -61,12 +54,13 @@ flex-wrap: wrap;
 }
 
 .input{
+    text-align: center;
     border: none;
     background-color: transparent;
     border-bottom: 1px solid rgb(0, 12, 53);
     padding: 5px 10px;
     margin: 10px 10px;
-    width: 130px;
+    width: 80px;
 }
 
 .input:focus, .input:active{
@@ -88,5 +82,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .label{
     font-weight: 100;
     display: inline-block;
-    min-width: 110px;
+    min-width: 120px;
 }
+

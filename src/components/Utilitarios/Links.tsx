@@ -6,8 +6,8 @@ type Linksprops = {
 
 export function Links({ children }: Linksprops) {
   return (
-    <a className={style.link}>
+    <div className={style.link}>
       {children}
-    </a>
+    </div>
   );
 }
