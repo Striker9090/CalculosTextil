@@ -6,7 +6,8 @@ export function CalculoTitulo() {
   const [tipo, setTipo] = useState<"titulo" | "peso" | "comprimento">("titulo");
 
   return (
-    <>
+    <div className={style.content}>
+      <div className={style.bloco}>
       <div className={style.tittle}>
         <Calculator />
         Conversões
@@ -23,7 +24,8 @@ export function CalculoTitulo() {
       </div>
       {/* Irá mostrar os campos de label/input */}
       <CalculadoraGenerica tipo={tipo} />
-    </>
+      </div>
+    </div>
   );
 }
 

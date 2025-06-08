@@ -1,5 +1,6 @@
 import type React from "react";
 import style from "./index.module.css";
+import { RoutesLink } from "../../routes";
 
 export default function Navegacao() {
   return (
@@ -19,19 +20,20 @@ export default function Navegacao() {
 export function BlocosNavegacao() {
   const ImageCard = ({ src, alt, title }: React.ComponentProps<"img">) => {
     return (
-      <div className={`${style.container}`}>
+      <a className={`${style.container}`}>
         <img src={src} alt={alt}/>
         <div className={`${style.overlay}`}>{title}</div>
-      </div>
+      </a>
     );
   };
 
   return (
     <div className={style.Blocos}>
-      <ImageCard src="./Fiacao.png" alt="Fiação" title="Fiação"/>
-      <ImageCard src="./Tecelagem.png" alt="Tecelagem" title="Tecelagem"/>
-      <ImageCard src="./Malharia.png" alt="Malharia" title="Malharia"/>
-      <ImageCard src="./Beneficiamento.png" alt="Beneficiamento" title="Beneficiamento"/>
+
+      <RoutesLink to="/fiacao"><ImageCard  src="./Fiacao.png" alt="Fiação" title="Fiação"/></RoutesLink>
+      <RoutesLink to="/tecelagem"><ImageCard src="./Tecelagem.png" alt="Tecelagem" title="Tecelagem"/></RoutesLink>
+      <RoutesLink to="/malharia"><ImageCard src="./Malharia.png" alt="Malharia" title="Malharia"/></RoutesLink>
+      <RoutesLink to="/beneficiamento"><ImageCard src="./Beneficiamento.png" alt="Beneficiamento" title="Beneficiamento"/></RoutesLink>
     </div>
   );
 }

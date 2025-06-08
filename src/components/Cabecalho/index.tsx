@@ -5,18 +5,19 @@ import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import style from "./index.module.css";
 import { SiWolframlanguage } from "react-icons/si";
+import { RoutesLink } from "../../routes";
 
 export default function Cabecalho() {
-  const [smarthfone, setSmarthfone] = useState(false);
+  const [smartphone, setSmarthfone] = useState(false);
 
   return (
     <>
-      <div className="md:hidden text-(--tipografia-principal)">
-        <button onClick={() => setSmarthfone(!smarthfone)}>
-          {smarthfone ? (
-            <IoMdClose size={40} className="m-5" />
+      <div className="md:hidden text-[var(--tipografia-principal)]">
+        <button onClick={() => setSmarthfone(!smartphone)}>
+          {smartphone ? (
+            <IoMdClose size={35} className="m-5" />
           ) : (
-            <FiMenu size={40} className="m-5" />
+            <FiMenu size={35} className="m-5" />
           )}
         </button>
       </div>
@@ -24,10 +25,12 @@ export default function Cabecalho() {
       {/* DESKTOP */}
       <div className="flex justify-center">
         <div className="hidden md:flex gap-20 m-5 px-5 py-1 bg-gray-300 w-fit rounded-3xl">
-          <Links>
-            <Home />
-            Início
-          </Links>
+          <RoutesLink to="/">
+            <Links>
+              <Home />
+              Início
+            </Links>
+          </RoutesLink>
           <Links>
             <FolderClosed />
             Geral
@@ -39,14 +42,17 @@ export default function Cabecalho() {
         </div>
         <div className="absolute right-5 top-4 md:bg-gray-300 rounded-3xl">
           <Links>
-            <Bolt className="md:text-black text-(--tipografia-principal)"/>
+            <Bolt className="md:text-black text-(--tipografia-principal)" />
           </Links>
         </div>
       </div>
 
-
-      <SiWolframlanguage size={35} className="md:hidden absolute top-5 left-[48%] text-(--tipografia-principal)  "/>
-      {smarthfone && (
+      {/* smartphone */}
+      <SiWolframlanguage
+        size={50}
+        className="md:hidden absolute top-4 left-[45%] text-(--tipografia-principal)  "
+      />
+      {smartphone && (
         <div className={`${style.link} md:hidden`}>
           <Links>
             <Home />
