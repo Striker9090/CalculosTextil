@@ -123,7 +123,7 @@ export default function ConversorTitulo() {
           />
         </div>
 
-        {/* <div className="campo">
+        <div className="campo">
           <label htmlFor="qtd_cabos">Qtd. Cabos</label>
           <input
             id="qtd_cabos"
@@ -133,33 +133,36 @@ export default function ConversorTitulo() {
             onChange={(e) => setQtdCabos(Number(e.target.value))}
             onWheel={handleScroll}
           />
-        </div> */}
+        </div>
 
-        {/* <div className="botao">
-          <button onClick={() => setMostrarTabela(true)}>Comparar</button>
-        </div> */}
+        <div className="botao">
+          {/* <button onClick={() => setMostrarTabela(true)}>Comparar</button> */}
+        </div>
 
-       {/*  {tabelaValores.length > 0 && (
-          <table className="table-titulo-parecido">
-            <thead>
+        {tabelaValores.length > 0 && (
+          <table className="w-full mt-4 text-sm text-center border border-gray-300 shadow-md rounded-md overflow-hidden">
+            <thead className="bg-[#32325e] text-white">
               <tr>
-                <th>Nm</th>
-                <th>Ne</th>
+                <th className="px-4 py-2">Nm</th>
+                <th className="px-4 py-2">Ne</th>
               </tr>
             </thead>
             <tbody>
               {tabelaValores.map(([nm, ne], i) => (
-                <tr key={i}>
-                  <td>{nm}</td>
-                  <td>{ne}</td>
+                <tr
+                  key={i}
+                  className={i % 2 === 0 ? "bg-gray-600" : "bg-gray-600"}
+                >
+                  <td className="px-4 py-2 border-t text-white/70">{nm}</td>
+                  <td className="px-4 py-2 border-t text-white/70">{ne}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-        )} */}
+        )}
       </div>
 
-      {/* {mostrarTabela && (
+      {mostrarTabela && (
         <div className="tabela-compara">
           <div className="cabecalho">
             <h2>Compara Título</h2>
@@ -196,8 +199,8 @@ export default function ConversorTitulo() {
               ))}
             </tbody>
           </table>
-        </div> 
-      )} */}
+        </div>
+      )}
     </div>
   );
 }
