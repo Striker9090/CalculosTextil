@@ -123,7 +123,7 @@ export default function ConversorTitulo() {
           />
         </div>
 
-        <div className="campo">
+        {/* <div className="campo">
           <label htmlFor="qtd_cabos">Qtd. Cabos</label>
           <input
             id="qtd_cabos"
@@ -133,13 +133,13 @@ export default function ConversorTitulo() {
             onChange={(e) => setQtdCabos(Number(e.target.value))}
             onWheel={handleScroll}
           />
-        </div>
+        </div> */}
 
-        <div className="botao">
+        {/* <div className="botao">
           <button onClick={() => setMostrarTabela(true)}>Comparar</button>
-        </div>
+        </div> */}
 
-        {tabelaValores.length > 0 && (
+       {/*  {tabelaValores.length > 0 && (
           <table className="table-titulo-parecido">
             <thead>
               <tr>
@@ -156,10 +156,10 @@ export default function ConversorTitulo() {
               ))}
             </tbody>
           </table>
-        )}
+        )} */}
       </div>
 
-      {mostrarTabela && (
+      {/* {mostrarTabela && (
         <div className="tabela-compara">
           <div className="cabecalho">
             <h2>Compara Título</h2>
@@ -196,8 +196,8 @@ export default function ConversorTitulo() {
               ))}
             </tbody>
           </table>
-        </div>
-      )}
+        </div> 
+      )} */}
     </div>
   );
 }
