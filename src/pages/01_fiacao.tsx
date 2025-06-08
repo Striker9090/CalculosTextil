@@ -3,6 +3,7 @@ import Cabecalho from "../components/Cabecalho";
 import "../styles/variaveis.css";
 import "../styles/Global.css"
 import { Tittle } from "../components/Tittle";
+import { CalculosFiacao } from "../features/Fiacao";
 
 export function Fiacao() {
   return (
@@ -10,6 +11,7 @@ export function Fiacao() {
       <Cabecalho />
       <Tittle>Fiação</Tittle>
       <Decoracoes/>
+      <CalculosFiacao/>
     </>
   );
 }

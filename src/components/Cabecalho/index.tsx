@@ -54,18 +54,24 @@ export default function Cabecalho() {
       />
       {smartphone && (
         <div className={`${style.link} md:hidden`}>
-          <Links>
-            <Home />
-            Início
-          </Links>
+          <RoutesLink to="/">
+            <Links>
+              <Home />
+              Início
+            </Links>
+          </RoutesLink>
+           <RoutesLink to="/">
           <Links>
             <FolderClosed />
             Geral
           </Links>
+          </RoutesLink>
+          <RoutesLink to="/">
           <Links>
             <BadgeHelp />
             Ajuda
           </Links>
+          </RoutesLink>
         </div>
       )}
     </>
