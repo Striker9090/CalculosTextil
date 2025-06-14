@@ -8,18 +8,34 @@ export default function Cronometro() {
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const [registrationTime, setRegistrationTime] = useState<number[]>([]);
   const registrationContainerRef = useRef<HTMLDivElement | null>(null);
+
+  type Registro = {
+    id: number; // pra travar por id único
+    tempo: number; // tempo total
+    diff: number; // diferença já calculada
+  };
+  const [registrationTime, setRegistrationTime] = useState<Registro[]>([]);
+  const idCounter = useRef(0);
 
   const registration = () => {
     setRegistrationTime((prev) => {
-      return [...prev, time];
+      const lastTempo = prev.length > 0 ? prev[prev.length - 1].tempo : 0;
+      const diff = time - lastTempo;
+
+      const novoRegistro: Registro = {
+        id: idCounter.current++, // id único
+        tempo: time,
+        diff: diff,
+      };
+
+      return [...prev, novoRegistro];
     });
   };
 
   const handleDelete = (indexToDelete: number) => {
     setRegistrationTime((prev) =>
-      prev.filter((_, index) => index !== indexToDelete)
+      prev.filter((registro) => registro.id !== indexToDelete)
     );
   };
 
@@ -88,23 +104,17 @@ export default function Cronometro() {
 
   const registrationTimer = () => {
     return registrationTime
-      .map((current, index) => {
-        const previous = index > 0 ? registrationTime[index - 1] : 0;
-        const diff = current - previous;
-
-        const formatted = formatTime(diff);
-
-        return (
+      .map((registro, index) => (
           <>
             {/* tempo calculado */}
 
-            <span key={index} className="flex text-gray-700 p-3">
+            <span key={registro.id} className="flex text-gray-700 p-3">
               <span className="inline-block min-w-[30px]">#{index + 1} </span>:
               <span>
-                {formatted} &nbsp; &nbsp; &nbsp; {formatTime(current)}
+                {formatTime(registro.diff)} &nbsp; &nbsp; &nbsp; {formatTime(registro.tempo)}
               </span>
               <span
-                onClick={() => handleDelete(index)}
+                onClick={() => handleDelete(registro.id)}
                 className="ml-auto cursor-pointer text-red-500 hover:text-red-700"
               >
                 <Trash2 />
@@ -112,9 +122,9 @@ export default function Cronometro() {
             </span>
             <hr className="border-gray-400 mt-2" />
           </>
-        );
-      })
-      .reverse();
+        )
+      ).reverse();
+      
   };
 
   const formatTime = (ms: number) => {
@@ -144,7 +154,7 @@ export default function Cronometro() {
     <>
       <Cabecalho />
       <div className="flex justify-center align-center">
-        <div className="flex flex-col items-center p-5 m-5 bg-white rounded-lg shadow-lg w-full max-w-[600px] min-w-[370px] max-h-[80vh] overflow-hidden">
+        <div className="flex flex-col items-center p-5 m-5 bg-white rounded-lg shadow-lg w-full max-w-[600px] min-w-[370px] max-h-[85vh] overflow-hidden">
           <form className="flex flex-row gap-10 mb-5 bg-gray-200 p-5 rounded-lg">
             <div className="flex gap-10 flex-col ">
               <Inputs
