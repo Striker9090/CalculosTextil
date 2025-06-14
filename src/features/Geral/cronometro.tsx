@@ -70,14 +70,14 @@ export default function Cronometro() {
       return time === 0 ? null : running ? (
         <button
           onClick={() => registration()}
-          className="flex justify-center gap-3 items-center text-[20px] mb-7 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 w-full max-w-[400px]"
+          className="flex justify-center cursor-pointer gap-3 items-center text-[20px] mb-7 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 w-full max-w-[400px]"
         >
           <PlayCircleIcon /> Registro
         </button>
       ) : (
         <button
           onClick={tradeStatus.button2}
-          className="flex justify-center gap-3 items-center text-[20px] mb-7 py-3 bg-red-400 text-white rounded hover:bg-red-500 w-full max-w-[400px]"
+          className="flex justify-center cursor-pointer gap-3 items-center text-[20px] mb-7 py-3 bg-red-400 text-white rounded hover:bg-red-500 w-full max-w-[400px]"
           title="Reiniciar"
         >
           <RefreshCcw /> Reiniciar
@@ -103,7 +103,10 @@ export default function Cronometro() {
               <span>
                 {formatted} &nbsp; &nbsp; &nbsp; {formatTime(current)}
               </span>
-              <span onClick={() => handleDelete(index)} className="ml-auto cursor-pointer text-red-500 hover:text-red-700">
+              <span
+                onClick={() => handleDelete(index)}
+                className="ml-auto cursor-pointer text-red-500 hover:text-red-700"
+              >
                 <Trash2 />
               </span>
             </span>
@@ -143,13 +146,14 @@ export default function Cronometro() {
       <div className="flex justify-center align-center">
         <div className="flex flex-col items-center p-5 m-5 bg-white rounded-lg shadow-lg w-full max-w-[600px] min-w-[370px] max-h-[80vh] overflow-hidden">
           <form className="flex flex-row gap-10 mb-5 bg-gray-200 p-5 rounded-lg">
-            <div className="flex gap-5 flex-col">
+            <div className="flex gap-10 flex-col ">
               <Inputs
                 id="horas"
                 name="formatos"
                 type="radio"
                 value="horas"
                 onChange={(e) => setType((e.target as HTMLInputElement).value)}
+                className="mr-1"
               >
                 HH:MM:SS
               </Inputs>
@@ -163,7 +167,7 @@ export default function Cronometro() {
                 1/100 seg
               </Inputs> */}
             </div>
-            <div className="flex gap-5 flex-col">
+            <div className="flex items-center gap-5 flex-col">
               <Inputs
                 id="decimal"
                 name="formatos"
@@ -171,6 +175,7 @@ export default function Cronometro() {
                 value="decimal"
                 checked={type === "decimal"}
                 onChange={(e) => setType((e.target as HTMLInputElement).value)}
+                className="mr-1"
               >
                 1/1.000 min
               </Inputs>
@@ -192,7 +197,7 @@ export default function Cronometro() {
           </div>
           <button
             onClick={tradeStatus.button1}
-            className="flex justify-center gap-3 items-center text-[20px] mb-7 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 w-full max-w-[400px]"
+            className="flex justify-center cursor-pointer gap-3 items-center text-[20px] mb-7 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 w-full max-w-[400px]"
           >
             {infbotao.Infbutton1()}
           </button>
@@ -202,7 +207,7 @@ export default function Cronometro() {
 
           {/* container para os registros */}
           {registrationTime.length > 0 ? (
-            <div className="flex gap-7 justify-start w-[400px] ml-5 mb-2 text-gray-600">
+            <div className="flex gap-7 w-full max-w-[400px] justify-start ml-5 mb-2 text-gray-600">
               <div>ID</div>
               <div>DIF.</div>
               <div>TOTAL</div>
@@ -210,7 +215,7 @@ export default function Cronometro() {
           ) : null}
           <div
             ref={registrationContainerRef}
-            className="flex flex-col bg-gray-200 rounded-lg w-full max-w-[400px] scroll-auto overflow-auto"
+            className="flex flex-col cursor-pointer bg-gray-200 rounded-lg w-full max-w-[400px] scroll-auto overflow-auto"
           >
             {registrationTimer()}
           </div>
@@ -219,4 +224,3 @@ export default function Cronometro() {
     </>
   );
 }
-

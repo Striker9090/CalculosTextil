@@ -1,27 +1,23 @@
-type InputsProps = {
+type InputsProps = React.InputHTMLAttributes<HTMLInputElement> & {
   children: React.ReactNode;
-  id: string;
-} & React.HTMLAttributes<HTMLLabelElement> &
-  React.InputHTMLAttributes<HTMLInputElement>;
+};
 
-export function Inputs({ children, type, id, name, ...rest }: InputsProps) {
-  if (type === "checkbox" || type === "radio") {
-    return (
-      <>
-        <div>
-          <input name={name} id={id} type={type} {...rest} />
-          <label htmlFor={id}>{children}</label>
-        </div>
-      </>
-    );
-  }
+export function Inputs({ children, type, id, name, className = "", ...rest }: InputsProps) {
+  const baseClass =
+    type === "checkbox" || type === "radio"
+      ? "appearance-none w-3 h-3 border-1 border-gray-400 rounded-full checked:bg-blue-500 checked:border-blue-500 focus:outline-none"
+      : "";
 
   return (
-    <>
-      <div>
-        <label htmlFor={id}>{children}</label>
-        <input name={name} id={id} type={type} {...rest} />
-      </div>
-    </>
+    <div>
+      <input
+        name={name}
+        id={id}
+        type={type}
+        {...rest}
+        className={`${baseClass} ${className}`}
+      />
+      <label htmlFor={id}>{children}</label>
+    </div>
   );
 }
