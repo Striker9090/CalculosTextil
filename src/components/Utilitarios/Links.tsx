@@ -1,8 +1,8 @@
-import style from "./utilitarios.module.css"
+import style from "./Links.module.css"
 
 type Linksprops = {
     children: React.ReactNode,
-};
+}& React.HTMLAttributes<HTMLDivElement>;
 
 export function Links({ children }: Linksprops) {
   return (

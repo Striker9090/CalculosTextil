@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    color: white;
     width: 100vw;
     justify-content: center;
 }
@@ -33,7 +34,5 @@
     width: fit-content;
     color:black;
 
-    & svg{
-
-    }
+   
 }

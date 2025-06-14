@@ -31,14 +31,18 @@ export default function Cabecalho() {
               Início
             </Links>
           </RoutesLink>
+          <RoutesLink to="/geral">
           <Links>
             <FolderClosed />
             Geral
           </Links>
+          </RoutesLink>
+          <RoutesLink to="/">
           <Links>
             <BadgeHelp />
             Ajuda
           </Links>
+          </RoutesLink>
         </div>
         <div className="absolute right-5 top-4 md:bg-gray-300 rounded-3xl">
           <Links>
@@ -60,7 +64,7 @@ export default function Cabecalho() {
               Início
             </Links>
           </RoutesLink>
-           <RoutesLink to="/">
+           <RoutesLink to="/geral">
           <Links>
             <FolderClosed />
             Geral

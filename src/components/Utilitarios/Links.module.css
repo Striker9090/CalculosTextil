@@ -2,7 +2,6 @@
   display: flex;
   gap: 15px;
   font-weight: 500;
-  color: var(--tipografia);
   padding: 7px;
 }
 

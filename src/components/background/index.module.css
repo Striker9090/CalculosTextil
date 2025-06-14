@@ -1,15 +1,16 @@
-    .fundo{
-    position: absolute;
-    bottom: 10%;
-    width: 100vw;
-    filter: opacity(50%);
-    pointer-events: none;
-    z-index: -1;
+
+
+.fundo {
+  position: absolute;
+  bottom: 10%;
+  width: 100vw;
+  filter: opacity(50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 @media (max-width: 1024px) {
-    .fundo{
-        bottom: 40%;
-    }
+  .fundo {
+    bottom: 40%;
+  }
 }
-

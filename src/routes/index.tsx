@@ -4,6 +4,8 @@ import App from "../pages/00_index";
 import { Tecelagem } from "../pages/02_tecelagem";
 import { Malharia } from "../pages/03_malharia";
 import { Beneficiamento } from "../pages/04_beneficiamento";
+import Geral from "../pages/Geral";
+import Cronometro from "../features/Geral/cronometro";
 
 export default function Router() {
   return (
@@ -17,8 +19,11 @@ export default function Router() {
         <Route path="/beneficiamento" element={<Beneficiamento />} />
       </Routes>
 
-      {/* Fiacao */}
-      
+      {/* Geral */}
+      <Routes>
+        <Route path="/geral" element={<Geral/>}/>
+        <Route path="/geral/cronometro" element={<Cronometro />} />
+      </Routes>
 
     </>
   );

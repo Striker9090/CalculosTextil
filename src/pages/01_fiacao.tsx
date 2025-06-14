@@ -10,7 +10,7 @@ export function Fiacao() {
     <>
       <Cabecalho />
       <Decoracoes />
-        <Tittle>Fiação</Tittle>
+      <Tittle>Fiação</Tittle>
       <CalculosFiacao />
     </>
   );
