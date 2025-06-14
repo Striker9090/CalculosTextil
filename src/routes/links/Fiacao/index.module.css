@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+}
+
+.contentLink{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.linknav{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    color:black;
+
+   
+}

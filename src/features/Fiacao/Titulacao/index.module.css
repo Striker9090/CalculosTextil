@@ -1,28 +1,3 @@
-.content{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100vw;
-    justify-content: center
-}
-
-.bloco{
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    background-color:rgba(31, 47, 83, 0.699);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    margin: 15px 30px;
-    border-radius: 10px 5px;
-    min-width: 285px;
-    max-width: 350px;
-    gap: 10px;
-    box-shadow: 5px 5px 15px 0px rgb(0, 0, 0)  ;
-}
-
-
-
 .blocoCtitulo{
     font-weight: 200;
 
@@ -46,11 +21,6 @@
     font-size: var(--titulo-texto);
     font-weight: 400;
     margin-bottom: 20px;
-}
-
-.parametros{
-    flex-direction: column;
-    margin-top: 0px ;
 }
 
 .input{

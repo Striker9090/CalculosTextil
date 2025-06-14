@@ -7,6 +7,8 @@ import { Beneficiamento } from "../pages/04_beneficiamento";
 
 export default function Router() {
   return (
+    <>
+      {/* Principal */}
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/fiacao" element={<Fiacao />} />
@@ -14,6 +16,11 @@ export default function Router() {
         <Route path="/malharia" element={<Malharia />} />
         <Route path="/beneficiamento" element={<Beneficiamento />} />
       </Routes>
+
+      {/* Fiacao */}
+      
+
+    </>
   );
 }
 

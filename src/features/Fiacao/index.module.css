@@ -1,0 +1,39 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+}
+
+.bloco{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background-color:rgba(31, 47, 83, 0.699);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 15px 30px;
+    border-radius: 10px 5px;
+    min-width: 285px;
+    max-width: 350px;
+    gap: 10px;
+    box-shadow: 5px 5px 15px 0px rgb(0, 0, 0)  ;
+}
+
+.contentLink{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.linknav{
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    color:black;
+
+    & svg{
+
+    }
+}

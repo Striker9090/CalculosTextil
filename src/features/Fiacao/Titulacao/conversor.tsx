@@ -1,5 +1,5 @@
 import { Repeat } from "lucide-react";
-import style from "../calculo.module.css";
+import style from "./index.module.css";
 import { useEffect, useState } from "react";
 
 type TipoTitulo = "NE" | "NM" | "TEX" | "DTEX" | "DENIER";
@@ -49,7 +49,7 @@ export default function ConversorTitulo() {
         ? fatoresParaTex[tipoSaida] / valorTex
         : fatoresParaTex[tipoSaida] * valorTex;
 
-    setValorSaida(resultado.toFixed(2));
+    setValorSaida(resultado.toFixed(2).replace(".",","));
 
     const tabela: string[][] = [];
     let mult = 2;

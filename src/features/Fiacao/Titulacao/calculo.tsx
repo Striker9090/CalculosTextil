@@ -1,5 +1,5 @@
 import { Calculator } from "lucide-react";
-import style from "../calculo.module.css";
+import style from "./index.module.css";
 import { useEffect, useState } from "react";
 
 export function CalculoTitulo() {
@@ -120,7 +120,7 @@ function CalculadoraGenerica({
       {ordemCampos.slice(0, 2).map((key) => campos[key as keyof typeof campos])}
 
       {/* Renderiza o campo calculado no final */}
-      <InputConversoes id="resultado" value={resultado} disabled>
+      <InputConversoes id="resultado" value={resultado.replace(".", ",")} disabled>
         {/* Mostra no label qual é o resultado de acordo com o "tipo"*/}
         {tipo === "peso"
           ? "Peso (g)"
