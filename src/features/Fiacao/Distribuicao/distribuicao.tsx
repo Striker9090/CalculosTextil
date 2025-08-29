@@ -1,4 +1,4 @@
-import { Text, Layer, Rect, Stage } from "react-konva";
+/* import { Text, Layer, Rect, Stage } from "react-konva";
 
 export function Distribuicao() {
   let dist = 5;
@@ -11,7 +11,7 @@ export function Distribuicao() {
     let array = [];
     const positionY = position;
     const sizeSquare = 50;
-    const spacing = 5;
+    const spacing = 3;
 
     // Largura total da distribuição
     const totalWidth = dist * sizeSquare + (dist - 1) * spacing;
@@ -53,11 +53,11 @@ export function Distribuicao() {
 
   return (
     <>
-      <Stage width={500} height={250}>
+      <Stage width={300} height={250}>
         <Layer>{distribui({containerWidth: 300, position: 20})}</Layer>
         <Layer>{distribui({containerWidth: 300, position: 100})}</Layer>
         <Layer>{distribui({containerWidth: 300, position: 180})}</Layer>
       </Stage>
     </>
   );
-}
+} */

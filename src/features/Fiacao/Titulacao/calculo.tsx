@@ -14,7 +14,7 @@ export function CalculoTitulo() {
       <div className={style.blocoCtitulo}>
         Tipo
         
-        <select value={tipo} onChange={(e) => setTipo(e.target.value as any)}>
+        <select value={tipo} onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTipo(e.target.value as "titulo" | "peso" | "comprimento")}>
           <option value="titulo">Título</option>
           <option value="peso">Peso</option>
           <option value="comprimento">Comprimento</option>
