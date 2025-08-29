@@ -33,14 +33,16 @@ export default function Cronometro() {
 
   const saveExcel = () => {
     const registros = registrationTime.map((registo) => ({
-      tempo: parseFloat(formatTime(registo.tempo).replace(",", ".")),
-      diferenca: parseFloat(formatTime(registo.diff).replace(",", ".")),
+      tempo: formatTime(registo.tempo),
+      diferenca: formatTime(registo.diff),
     }));
 
     const headers = [
       { label: "Tempo", key: "tempo" },
       { label: "Diferença", key: "diferenca" },
     ];
+
+    console.log(registros)
 
     return (
       <CSVLink
@@ -400,7 +402,7 @@ export default function Cronometro() {
                 </div>
               </form>
             </div>
-            <div className="absolute">{running ? null : saveExcel()}</div>
+            <div className="mt-5">{running ? null : saveExcel()}</div>
             <div className="">
               {/* <div
                 className="bg-gray-200 p-2 rounded-lg cursor-pointer hover:bg-gray-300"
